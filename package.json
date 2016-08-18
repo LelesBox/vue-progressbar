@@ -4,13 +4,16 @@
   "description": "Another vue-progressbar plugin",
   "author": "LelesBox <li_xiaoliang@foxmail.com>",
   "main": "src/progressbar/index.js",
-  "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "test": "",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "mock-server": "./node_modules/.bin/json-server ./mock-data/db.json --port 2333 --delay 6000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LelesBox/vue-progressbar.git"
   },
   "dependencies": {
     "babel-runtime": "^6.0.0",
