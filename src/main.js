@@ -5,9 +5,6 @@ import VueProgressBar from './progressbar'
 
 Vue.use(VueResource)
 Vue.use(VueProgressBar)
-VueProgressBar.start()
-const root = 'localhost:2333'
-Vue.http.options.root = root
 
 /* eslint-disable no-new */
 new Vue({

@@ -1,13 +1,13 @@
-import Vue from 'vue'
 import eventEmitter from './eventbus'
 import progressBar from './progressbar.vue'
 let progress = function () {}
 
 progress.install = function (Vue, options) {
   Vue.component('progress-bar', progressBar)
+  start(Vue)
 }
 
-progress.start = function () {
+function start (Vue) {
   let index = 0
   if (!Vue.http) {
     throw Error('this plugin need use vue-resource before')
@@ -24,4 +24,9 @@ progress.start = function () {
     })
   }
 }
+
 export default progress
+
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(progress)
+}
