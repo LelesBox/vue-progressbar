@@ -1,4 +1,3 @@
-// https://github.com/shelljs/shelljs
 require('shelljs/global')
 env.NODE_ENV = 'production'
 
@@ -6,7 +5,8 @@ var path = require('path')
 var config = require('../config')
 var ora = require('ora')
 var webpack = require('webpack')
-var webpackConfig = require('./webpack.plugin')
+var webpackConfig = require('./webpack.plugin.conf')
+var fs = require('fs')
 
 console.log(
   '  Tip:\n' +
@@ -32,4 +32,8 @@ webpack(webpackConfig, function (err, stats) {
       chunks: false,
       chunkModules: false
     }) + '\n')
+  var jspath = path.resolve(__dirname, '../release/vue-progressbar.js')
+  var jsFile = fs.readFileSync(jspath)
+  jsFile = '/*eslint-disable*/\n' + jsFile
+  fs.writeFileSync(jspath, jsFile, 'utf8')
 })
