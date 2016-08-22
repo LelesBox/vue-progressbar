@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
   .progress-bar{
     position: fixed;
     top:0;

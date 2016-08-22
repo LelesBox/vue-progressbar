@@ -14,11 +14,11 @@ var filename = 'vue-progressbar'
 var webpackConfig = merge(baseWebpackConfig, {
   entry: './src',
   module: {
-    loaders: utils.styleLoaders({ sourceMap: config.build.productionSourceMap, extract: true })
+    loaders: utils.styleLoaders({ sourceMap: false, extract: false })
   },
-  devtool: config.build.productionSourceMap ? '#source-map' : false,
+  devtool: false,
   output: {
-    library: 'VueAccordion',
+    library: 'VueProgressBar',
     libraryTarget: 'umd',
     filename: filename + '.js',
     path: path.resolve(__dirname, '../release')

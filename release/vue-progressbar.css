@@ -1,2 +1,1 @@
-.progress-bar[_v-8640edde]{position:fixed;top:0;left:0;height:2px;-webkit-transition:all .3s ease;transition:all .3s ease;background-color:skyblue}
-/*# sourceMappingURL=vue-progressbar.css.map*/
+.progress-bar{position:fixed;top:0;left:0;height:2px;-webkit-transition:all .3s ease;transition:all .3s ease;background-color:skyblue}
